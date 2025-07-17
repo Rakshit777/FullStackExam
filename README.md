@@ -31,3 +31,27 @@ cd frontend
 
 # Step 3: Install frontend dependencies
 npm install
+
+project-root/
+│
+├── models/
+│   ├── mysql/       # MySQL models (e.g. User, Order)
+│   └── mongodb/     # MongoDB models (e.g. Product)
+│
+├── controllers/     # Controller logic for each API route
+│
+├── routes/          # Express route handlers (e.g. user.routes.js)
+│
+├── middleware/      # Middleware functions (e.g. token authentication)
+│
+├── config/
+│   ├── mysql.js     # MySQL database connection
+│   └── mongodb.js   # MongoDB database connection
+│
+├── frontend/        # Next.js frontend app
+│
+├── index.js         # Entry point of the backend server
+├── package.json     # Backend dependencies and scripts
+└── README.md        # Project instructions
+
+
