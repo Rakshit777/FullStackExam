@@ -22,7 +22,6 @@ This is a full-stack mini e-commerce application built using:
 
 You need to install dependencies in both the **backend (root)** and the **frontend** folders.
 
-```bash
 # Step 1: Install backend dependencies
 npm install
 
@@ -31,6 +30,13 @@ cd frontend
 
 # Step 3: Install frontend dependencies
 npm install
+
+### 3. To run next project build command if not work with 'npm start'
+npm run build
+npm start
+
+### 3. To run node project
+npm start
 
 project-root/
 │
