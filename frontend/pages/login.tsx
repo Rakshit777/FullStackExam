@@ -18,17 +18,39 @@ export default function LoginPage() {
       console.error(err);
     }
   };
+  const goToRegister = () => {
+    router.push('/register');
+  };
 
   return (
-    <form onSubmit={handleLogin}>
-      <h1>Login</h1>
-      <input type="email" placeholder="Email" value={email}
-        onChange={(e) => setEmail(e.target.value)} required />
-      <br />
-      <input type="password" placeholder="Password" value={password}
-        onChange={(e) => setPassword(e.target.value)} required />
-      <br />
-      <button type="submit">Login</button>
-    </form>
+    <div>
+      <form onSubmit={handleLogin}>
+        <h1>Login</h1>
+
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email" placeholder="Email" value={email}
+            onChange={(e) => setEmail(e.target.value)} required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password" placeholder="Password" value={password}
+            onChange={(e) => setPassword(e.target.value)} required
+          />
+        </div>
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      <p>
+        Don't have an account?{' '}
+        <button onClick={goToRegister} style={{ color: 'blue', textDecoration: 'underline', background: 'none', border: 'none', cursor: 'pointer' }}>
+          Register here
+        </button>
+      </p>
+    </div>
   );
 }
